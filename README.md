@@ -1,2 +1,2 @@
 # AdvancedWebApps-PlusRepairShpop
- A webabb for Advanced Web Apps cousrse using servlets and jsp, js, css, html.
+A Website for Advanced Web Apps Course using servlets and JSP, JS, CSS, HTML.
