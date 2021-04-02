@@ -1,0 +1,60 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px;
+}
+
+header #logo {
+  display: inline-block;
+}
+
+header #logo div {
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  background-color: white;
+  border-radius: 100px;
+  width: 140px;
+  height: 40px;
+}
+
+header #logo div img {
+  height: 30px;
+  margin-top: 4px;
+}
+
+header #menu-list {
+  display: inline-block;
+}
+
+header #menu-list ul li {
+  display: inline-block;
+}
+
+header #menu-list ul li a {
+  color: white;
+  font-size: 17px;
+  margin: 0px 5px;
+  padding: 5px 15px;
+  border-radius: 100px;
+  font-weight: bold;
+}
+
+header #menu-list ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+header #menu-list ul li #current {
+  background-color: white;
+  color: #8841e6;
+}
+/*# sourceMappingURL=header.css.map */

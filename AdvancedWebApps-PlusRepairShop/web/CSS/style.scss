@@ -1,0 +1,151 @@
+@import "vars";
+@import "header";
+
+@mixin myText {
+  color: $textPrimary;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container1m($float) {
+  box-sizing: border-box;
+  max-width: 500px;
+  min-width: 250px;
+  display: block;
+  float: $float;
+}
+
+* {
+  font-family: Roboto;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  background-image: $primary;
+}
+
+#big-container {
+  max-width: 1200px;
+  display: block;
+  margin: auto;
+}
+
+section {
+  box-sizing: border-box;
+  margin: 90px 0px;
+}
+
+#section1 {
+  @include flexCenter();
+  .container1 {
+    width: 100%;
+    padding: 100px 0px;
+    background-color: white;
+    display: inline-block;
+    border-radius: 10px;
+
+    #text {
+      @include container1m(left);
+      padding: 50px 100px;
+      img {
+        max-width: 200px;
+      }
+      p {
+        color: $textPrimary;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+
+    #image {
+      @include container1m(right);
+      div {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.regular-text {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: $secondary;
+}
+
+#section2 {
+  #cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .card {
+      @include flexCenter();
+      margin: 10px 0px;
+      box-sizing: border-box;
+      flex-direction: column;
+      border-radius: 10px;
+      background-color: $secondary;
+      max-width: 250px;
+      min-height: 380px;
+      padding: 30px;
+      span {
+        color: $textPrimary;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      img {
+        margin: 30px 0px;
+        max-height: 150px;
+      }
+      p {
+        color: $textPrimary;
+      }
+    }
+  }
+}
+
+#section3 {
+  @include flexCenter();
+  #container2 {
+    margin: auto;
+    width: 100%;
+    padding: 100px 0px;
+    background-color: white;
+    display: block;
+    border-radius: 10px;
+    p {
+      padding-bottom: 30px;
+      color: $textPrimary;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+    #map {
+      @include flexCenter();
+    }
+  }
+}
+
+
+footer {
+  background-color: white;
+  padding: 20px;
+  p {
+      @include myText();
+      text-align: center;
+  }
+}

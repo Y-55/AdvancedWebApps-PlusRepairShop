@@ -1,0 +1,50 @@
+@import "vars";
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 10px;
+  #logo {
+    display: inline-block;
+    div {
+      vertical-align: middle;
+      text-align: center;
+      display: table-cell;
+      background-color: white;
+      border-radius: 100px;
+      width: 140px;
+      height: 40px;
+      img {
+        height: 30px;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  #menu-list {
+    display: inline-block;
+    ul {
+      li {
+        display: inline-block;
+        a {
+          color: white;
+          font-size: 17px;
+          margin: 0px 5px;
+          padding: 5px 15px;
+          border-radius: 100px;
+          font-weight: bold;
+          &:hover {
+            background-color: $hover;
+          }
+        }
+        #current {
+            background-color: $secondary;
+            color: $textPrimary;
+            
+        }
+      }
+    }
+  }
+}
