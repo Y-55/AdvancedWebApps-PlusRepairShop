@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>JSP Page</title>
     <link rel="stylesheet" href="CSS/style.css" />
+    <script src="js/site.js"></script>
   </head>
   <body>
     <header>
@@ -20,7 +21,7 @@
               >Add New Repair Request</a
             >
           </li>
-          <li><a href="">Browse All Repair Records</a></li>
+          <li><a href="Browse_All_Repair_Records.html">Browse All Repair Records</a></li>
           <li><a href="Add_Feedback.html">Add Feedback</a></li>
         </ul>
       </div>
@@ -29,23 +30,33 @@
       <section id="section1-form">
         <div id="container1-form">
           <h1>Add New Repair Request</h1>
-          <form action="">
-            <div id="errName">error: the name is empty</div>
+          <form
+            action="NewRequestProcess"
+            method="post"
+            onsubmit="return validateAddNewRepairRequest();"
+          >
+            <div id="errComputer_Owner">Error: this Field Is Mandatory</div>
             <input
+              id="Computer_Owner"
               class="input"
-              name=""
+              name="Computer_Owner"
               type="text"
               placeholder="Computer Owner"
             />
-            <div id="errName">error: the name is empty</div>
+
+            <div id="errComputer_Serial_Number">
+              Error: this Field Is Mandatory
+            </div>
             <input
+              id="Computer_Serial_Number"
               class="input"
-              name=""
+              name="Computer_Serial_Number"
               type="text"
               placeholder="Computer Serial Number"
             />
-            <div id="errName">error: the name is empty</div>
-            <select name="" id="">
+
+            <div id="errType">Error: you shoud choose a type</div>
+            <select name="Type" id="Type">
               <option value="Select the device type">
                 Select the device type
               </option>
@@ -53,25 +64,47 @@
               <option value="Laptop">Laptop</option>
               <option value="Tablet">Tablet</option>
             </select>
-            <div id="errName">error: the name is empty</div>
-            <input class="input" name="" type="text" placeholder="Model" />
-            <div id="errName">error: the name is empty</div>
-            <input class="input" name="" type="text" placeholder="Memory GB" />
-            <div id="errName">error: the name is empty</div>
+
+            <div id="errModel">Error: this Field Is Mandatory</div>
             <input
+              id="Model"
               class="input"
-              name=""
+              name="Model"
+              type="text"
+              placeholder="Model"
+            />
+
+            <div id="errMemory_GB">
+              Error: this Field Is Mandatory and must be a number
+            </div>
+            <input
+              id="Memory_GB"
+              class="input"
+              name="Memory_GB"
+              type="text"
+              placeholder="Memory GB"
+            />
+
+            <div id="errHardDisk_GB">
+              Error: this Field Is Mandatory and must be a number
+            </div>
+            <input
+              id="HardDisk_GB"
+              class="input"
+              name="HardDisk_GB"
               type="text"
               placeholder="HardDisk GB"
             />
-            <div id="errName">error: the name is empty</div>
+
+            <div id="errProblems">Error: this Field Is Mandatory</div>
             <textarea
-              name=""
-              id=""
+              name="Problems"
+              id="Problems"
               cols="30"
               rows="5"
               placeholder="Problems"
             ></textarea>
+            
             <input id="btn" type="submit" value="submit" />
           </form>
         </div>
