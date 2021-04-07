@@ -41,7 +41,7 @@ function validateAddNewRepairRequest() {
   }
   //--------------------------------Model hours menu validate----------------------------------------------
   if (
-    document.getElementById("Model").value.search(/^[A-Za-z0-9]{1,20}$/) >= 0
+    document.getElementById("Model").value.search(/^[A-Za-z0-9 ]{1,20}$/) >= 0
   ) {
     document.getElementById("errModel").style.visibility = "hidden";
   } else {

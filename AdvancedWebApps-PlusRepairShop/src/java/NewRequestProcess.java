@@ -68,7 +68,7 @@ public class NewRequestProcess extends HttpServlet {
                     + "      </div>\n"
                     + "    </header>"
                     + "<div id=\"responsePage\">\n"
-                    + "<a href=\"index.html\">Click here to go home</a>");
+                    + "<a href=\"index.html\">Click here to go home</a> <br>");
 
             MySQLDatabase db = new MySQLDatabase();
 
