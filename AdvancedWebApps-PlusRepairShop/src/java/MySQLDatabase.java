@@ -18,11 +18,11 @@ public class MySQLDatabase {
     public Connection getConnection() throws ClassNotFoundException, SQLException {
 
         final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-        final String DB_URL = "jdbc:mysql://localhost/plus_repair_shop";
+        final String DB_URL = "jdbc:mysql://localhost/plus_repair_shop_repairs";
 
         //  Database credentials
         final String USER = "root";
-        final String PASS = "root";
+        final String PASS = "admin";
 
         Class.forName(JDBC_DRIVER);
 

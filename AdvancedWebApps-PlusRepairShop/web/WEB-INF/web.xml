@@ -4,9 +4,17 @@
         <servlet-name>NewRequestProcess</servlet-name>
         <servlet-class>NewRequestProcess</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Browse_All_Repair_Records</servlet-name>
+        <servlet-class>Browse_All_Repair_Records</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>NewRequestProcess</servlet-name>
         <url-pattern>/NewRequestProcess</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Browse_All_Repair_Records</servlet-name>
+        <url-pattern>/Browse_All_Repair_Records</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

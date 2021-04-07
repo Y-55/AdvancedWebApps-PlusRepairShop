@@ -6,10 +6,10 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  *
@@ -68,7 +68,7 @@ public class NewRequestProcess extends HttpServlet {
                     + "      </div>\n"
                     + "    </header>"
                     + "<div id=\"responsePage\">\n"
-                    + "<a href=\"index.html\">Click here to go home</a> <br>");
+                    + "<a href=\"index.html\">Click here to go home</a>");
 
             MySQLDatabase db = new MySQLDatabase();
 
@@ -103,6 +103,7 @@ public class NewRequestProcess extends HttpServlet {
                     + "        YusufAbdulwahab_MuhammedAl-Rammah\n"
                     + "      </p>\n"
                     + "    </footer>\n"
+                    + "<script type=\"text/javascript\">var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:\"167bf1987ff409407bbbb16c4a31ad4ec27895230e778ccdc91486fc6bebc316\", values:{},ready:function(){}};var d=document;s=d.createElement(\"script\");s.type=\"text/javascript\";s.id=\"zsiqscript\";s.defer=true;s.src=\"https://salesiq.zoho.com/widget\";t=d.getElementsByTagName(\"script\")[0];t.parentNode.insertBefore(s,t);d.write(\"<div id='zsiqwidget'></div>\");</script>"
                     + "  </body>\n"
                     + "</html>");
         } finally {
