@@ -1,63 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>JSP Page</title>
-    <link rel="stylesheet" href="CSS/style.css" />
-  </head>
-  <body>
-    <header>
-      <div id="logo">
-        <div>
-          <img src="images/logo3.png" alt="" />
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>JSP Page</title>
+        <link rel="stylesheet" href="CSS/style.css" />
+        <script src="js/site.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <div>
+                    <img src="images/logo3.png" alt="" />
+                </div>
+            </div>
+            <div id="menu-list">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="Add_New_Repair_Request.html">Add New Repair Request</a>
+                    </li>
+                    <li><a href="Browse_All_Repair_Records">Browse All Repair Records</a></li>
+                    <li><a id="current" href="Add_Feedback.html">Add Feedback</a></li>
+                </ul>
+            </div>
+        </header>
+        <div id="big-container-form">
+            <section id="section1-form">
+                <div id="container1-form">
+                    <h1>Add Feedback</h1>
+                    <form action="AddFeedbackEntry"
+                          method="post"
+                          onsubmit="return validateAddFeedBack();"
+                          >
+                        <div id="errName">error: the name is Mandatory</div>
+                        <input id ="name" class="input" name="Name" type="text" placeholder="Name" />
+                        <div id="errCountry">error: the Country is Mandatory</div>
+                        <input id="country" class="input" name="Country" type="text" placeholder="Country" />
+                        <div id="errPhone">error: the phone must be 05xxxxxxxx  or  +9665xxxxxxxx</div>
+                        <input id="phone" class="input" name="Phone" type="text" placeholder="Phone" />
+                        <div id="errEmail">error: the Email must be example@domain.com</div>
+                        <input id="email" class="input" name="Email" type="text" placeholder="Email" />
+                        <div id="errSubject">error: the Subject is Mandatory</div>
+                        <input id="subject"  class="input" name="Subject" type="text" placeholder="Subject" />
+                        <div id="errType">error: the Type is Mandatory</div>
+                        <input id="type" class="input" name="Type" type="text" placeholder="Type" />
+                        <div id="errMessage">error: the Message is Mandatory</div>
+                        <textarea
+                            name="Message"
+                            id="message"
+                            cols="30"
+                            rows="5"
+                            placeholder="Message"
+                            ></textarea>
+                        <input id="btn" type="submit" value="submit" />
+                    </form>
+                </div>
+            </section>
         </div>
-      </div>
-      <div id="menu-list">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li>
-            <a href="Add_New_Repair_Request.html">Add New Repair Request</a>
-          </li>
-          <li><a href="Browse_All_Repair_Records">Browse All Repair Records</a></li>
-          <li><a id="current" href="Add_Feedback.html">Add Feedback</a></li>
-        </ul>
-      </div>
-    </header>
-    <div id="big-container-form">
-      <section id="section1-form">
-        <div id="container1-form">
-          <h1>Add Feedback</h1>
-          <form action="">
-            <div id="errName">error: the name is empty</div>
-            <input class="input" name="" type="text" placeholder="Name" />
-            <div id="errName">error: the name is empty</div>
-            <input class="input" name="" type="text" placeholder="Country" />
-            <div id="errName">error: the name is empty</div>
-            <input class="input" name="" type="text" placeholder="Phone" />
-            <div id="errName">error: the name is empty</div>
-            <input class="input" name="" type="text" placeholder="Email" />
-            <div id="errName">error: the name is empty</div>
-            <input class="input" name="" type="text" placeholder="Subject" />
-            <div id="errName">error: the name is empty</div>
-            <input class="input" name="" type="text" placeholder="Type" />
-            <div id="errName">error: the name is empty</div>
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="5"
-              placeholder="Message"
-            ></textarea>
-            <input id="btn" type="submit" value="submit" />
-          </form>
-        </div>
-      </section>
-    </div>
-    <footer>
-      <p>
-        copyright preserved for the site 2020 |
-        YusufAbdulwahab_MuhammedAl-Rammah
-      </p>
-    </footer>
-  </body>
+        <footer>
+            <p>
+                copyright preserved for the site 2020 |
+                YusufAbdulwahab_MuhammedAl-Rammah
+            </p>
+        </footer>
+    </body>
 </html>
