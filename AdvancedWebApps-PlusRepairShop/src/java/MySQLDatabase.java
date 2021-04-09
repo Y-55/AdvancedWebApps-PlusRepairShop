@@ -58,32 +58,4 @@ public class MySQLDatabase {
         return rValue;
 
     }
-    
-     public int insertIntoFeedbacks(String Name, String Country,
-            String Phone, String Email, String Subject, String Type, String Message) throws ClassNotFoundException, SQLException {
-
-        Connection conn = getConnection();
-        String sql = "INSERT INTO Feedbacks (Name, Country, Phone, "
-                + "Email, Subject, Type, Message, CreationDateTime) "
-                + "VALUES (?, ?, ?, ?, ?, ?, "
-                + "?, NOW())";   //NOW())";
-
-        PreparedStatement pSt = conn.prepareStatement(sql);
-
-        pSt.setString(1, Name);                     // 1 specifies the first parameter in the query  
-        pSt.setString(2, Country);             // 2 specifies the second parameter in the query
-        pSt.setString(3, Phone);
-        pSt.setString(4, Email);
-        pSt.setString(5, Subject);
-        pSt.setString(6, Type);
-        pSt.setString(7, Message);
-        
-        int rValue = pSt.executeUpdate();
-        
-        conn.close();
-        pSt.close();
-
-        return rValue;
-
-    }
 }
